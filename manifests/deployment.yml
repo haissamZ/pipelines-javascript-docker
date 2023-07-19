@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: haissamzpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: haissamzpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: haissamzpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: haissamzpipelinesjavascriptdocker 
+          image: mycontainerregistry20230719.azurecr.io/haissamzpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
